@@ -1,7 +1,7 @@
 name: "RPi2 MQTT GPIO Bridge"
 version: "1.0.0"
 slug: "rpi2_mqtt_bridge"
-description: "MQTT шлюз для GPIO через rpi2home-assistant"
+description: "MQTT gateway for GPIO using rpi2home-assistant"
 arch:
   - armhf
   - armv7
