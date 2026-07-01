@@ -1,19 +1,19 @@
-name: "RPi2 MQTT GPIO Bridge"
-version: "1.0.0"
-slug: "rpi2_mqtt_bridge"
-description: "MQTT gateway for GPIO using rpi2home-assistant"
+name: RPi2 MQTT GPIO Bridge
+version: 1.0.0
+slug: rpi2_mqtt_bridge
+description: MQTT gateway for GPIO using rpi2home-assistant
 arch:
   - aarch64
-startup: "application"
-boot: "auto"
+startup: application
+boot: auto
 host_network: true
 privileged:
   - SYS_ADMIN
   - SYS_RAWIO
   - SYS_RESOURCE
 build_from:
-  aarch64: "ghcr.io/home-assistant/aarch64-base-python:3.12-alpine"
+  aarch64: ghcr.io/home-assistant/aarch64-base-python:3.12-alpine
 options:
-  config_file: "/config/rpi2home-assistant.yaml"
+  config_file: /config/rpi2home-assistant.yaml
 schema:
-  config_file: "str"
+  config_file: str
