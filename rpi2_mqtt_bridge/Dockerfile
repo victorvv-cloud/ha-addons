@@ -1,10 +1,8 @@
+# Используем образ, указанный в config.yaml
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk add --no-cache python3 py3-pip \
-    && pip3 install --no-cache-dir rpi2home-assistant
-
+# Копируем и запускаем скрипт run.sh
 COPY run.sh /
 RUN chmod a+x /run.sh
-
 CMD [ "/run.sh" ]
