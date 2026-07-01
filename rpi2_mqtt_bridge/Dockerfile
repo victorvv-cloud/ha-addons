@@ -1,12 +1,11 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Устанавливаем Python, pip и зависимости
-RUN apk add --no-cache python3 py3-pip py3-setuptools \
-    && pip3 install --no-cache-dir rpi2home-assistant
+# Устанавливаем Python и pip
+RUN apk add --no-cache python3 py3-pip
 
-# Создаем каталог для конфигурации
-RUN mkdir -p /config
+# Устанавливаем rpi2home-assistant
+RUN pip3 install --no-cache-dir rpi2home-assistant
 
 # Копируем скрипт запуска
 COPY run.sh /
