@@ -13,6 +13,8 @@ privileged:
   - SYS_ADMIN
   - SYS_RAWIO
   - SYS_RESOURCE
+# +++ НОВАЯ СТРОКА: Указываем готовый образ +++
+image: "ghcr.io/f18m/rpi2home-assistant-{arch}"
 options:
   config_file: "/config/rpi2home-assistant.yaml"
 schema:
