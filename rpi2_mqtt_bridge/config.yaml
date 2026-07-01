@@ -9,7 +9,10 @@ arch:
 startup: "application"
 boot: "auto"
 host_network: true
-privileged: true
+privileged:
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - SYS_RESOURCE
 options:
   config_file: "/config/rpi2home-assistant.yaml"
 schema:
