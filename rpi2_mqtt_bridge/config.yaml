@@ -3,8 +3,6 @@ version: "1.0.0"
 slug: "rpi2_mqtt_bridge"
 description: "MQTT gateway for GPIO using rpi2home-assistant"
 arch:
-  - armhf
-  - armv7
   - aarch64
 startup: "application"
 boot: "auto"
@@ -13,8 +11,6 @@ privileged:
   - SYS_ADMIN
   - SYS_RAWIO
   - SYS_RESOURCE
-# +++ НОВАЯ СТРОКА: Указываем готовый образ +++
-image: "ghcr.io/f18m/rpi2home-assistant-{arch}"
 options:
   config_file: "/config/rpi2home-assistant.yaml"
 schema:
