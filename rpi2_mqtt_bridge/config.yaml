@@ -11,6 +11,8 @@ privileged:
   - SYS_ADMIN
   - SYS_RAWIO
   - SYS_RESOURCE
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base-python:3.12-alpine"
 options:
   config_file: "/config/rpi2home-assistant.yaml"
 schema:
